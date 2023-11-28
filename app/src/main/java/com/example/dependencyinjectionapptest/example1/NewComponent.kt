@@ -4,7 +4,5 @@ import dagger.Component
 
 @Component
 interface NewComponent {
-
-	fun inject(activity: Activity)
-
+    fun inject(activity: Activity)
 }

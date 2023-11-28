@@ -7,11 +7,15 @@ import com.example.dependencyinjectionapptest.R
 import com.example.dependencyinjectionapptest.example1.Activity
 
 class MainActivity : AppCompatActivity() {
-	override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-		super.onCreate(savedInstanceState, persistentState)
-		setContentView(R.layout.activity_main)
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        setContentView(R.layout.activity_main)
 
-		val activity = Activity()
-		activity.keyboard.toString()
-	}
+        val activity = Activity()
+        activity.keyboard.toString()
+        activity.mouse.toString()
+        activity.processor.toString()
+        activity.monitor.toString()
+        activity.computer.toString()
+    }
 }
