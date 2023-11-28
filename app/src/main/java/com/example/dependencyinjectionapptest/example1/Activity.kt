@@ -1,8 +1,10 @@
 package com.example.dependencyinjectionapptest.example1
 
-class MainActivity {
+import javax.inject.Inject
 
-	lateinit var computer: Computer
+class Activity {
+
+	@Inject
 	lateinit var keyboard: Keyboard
 
 	init {
