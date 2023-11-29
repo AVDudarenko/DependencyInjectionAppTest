@@ -4,15 +4,16 @@ import com.example.dependencyinjectionapptest.example2.data.datasource.ExampleLo
 import com.example.dependencyinjectionapptest.example2.data.datasource.ExampleRemoteDataSource
 import com.example.dependencyinjectionapptest.example2.data.mapper.ExampleMapper
 import com.example.dependencyinjectionapptest.example2.domain.ExampleRepository
+import javax.inject.Inject
 
-class ExampleRepositoryImp(
-    private val localDataSource: ExampleLocalDataSource,
-    private val remoteDataSource: ExampleRemoteDataSource,
-    private val mapper: ExampleMapper
+class ExampleRepositoryImp @Inject constructor(
+	private val localDataSource: ExampleLocalDataSource,
+	private val remoteDataSource: ExampleRemoteDataSource,
+	private val mapper: ExampleMapper
 ) : ExampleRepository {
-    override fun method() {
-        mapper.map()
-        localDataSource.method()
-        remoteDataSource.method()
-    }
+	override fun method() {
+		mapper.map()
+		localDataSource.method()
+		remoteDataSource.method()
+	}
 }
