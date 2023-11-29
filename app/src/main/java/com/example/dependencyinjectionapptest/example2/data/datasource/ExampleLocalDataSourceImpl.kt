@@ -1,9 +1,12 @@
 package com.example.dependencyinjectionapptest.example2.data.datasource
 
-class ExampleLocalDataSourceImpl(
-private val database:ExampleDataBase
-):ExampleLocalDataSource {
-    override fun method() {
-        databse.method
-    }
+import com.example.dependencyinjectionapptest.example2.data.database.ExampleDatabase
+import javax.inject.Inject
+
+class ExampleLocalDataSourceImpl @Inject constructor(
+	private val database: ExampleDatabase
+) : ExampleLocalDataSource {
+	override fun method() {
+		database.method()
+	}
 }

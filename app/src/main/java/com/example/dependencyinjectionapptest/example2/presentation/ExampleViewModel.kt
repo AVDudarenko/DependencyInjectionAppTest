@@ -1,11 +1,12 @@
 package com.example.dependencyinjectionapptest.example2.presentation
 
 import com.example.dependencyinjectionapptest.example2.domain.ExampleUseCase
+import javax.inject.Inject
 
-class ExampleViewModel(
-    private val useCase: ExampleUseCase
+class ExampleViewModel @Inject constructor(
+	private val useCase: ExampleUseCase
 ) {
-    fun method() {
-        useCase
-    }
+	fun method() {
+		useCase
+	}
 }

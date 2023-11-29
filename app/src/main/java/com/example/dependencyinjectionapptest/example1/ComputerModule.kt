@@ -6,9 +6,9 @@ import dagger.Provides
 @Module
 class ComputerModule {
     /**
-     * That method mean, if we need object of current type, dagger will be see, monitor dont have
-     * annotation @Inject constructor, and will be search in realisation in modules.
-     */
+	 * That method mean, if we need object of current type, dagger will be see, monitor don't have
+	 * annotation @Inject constructor, and will be search in realisation of modules.
+	 */
     @Provides
     fun provideMonitor(): Monitor {
         return Monitor()
