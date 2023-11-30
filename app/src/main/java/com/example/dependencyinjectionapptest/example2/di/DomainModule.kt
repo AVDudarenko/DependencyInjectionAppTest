@@ -10,6 +10,6 @@ interface DomainModule {
 
 	@ApplicationScope
 	@Binds
-	fun provideRepository(impl: ExampleRepositoryImp): ExampleRepository
+	fun bindRepository(impl: ExampleRepositoryImp): ExampleRepository
 
 }
