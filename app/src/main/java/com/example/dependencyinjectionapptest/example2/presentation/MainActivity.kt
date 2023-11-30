@@ -1,9 +1,9 @@
 package com.example.dependencyinjectionapptest.example2.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dependencyinjectionapptest.R
-import com.example.dependencyinjectionapptest.example2.di.ContextModule
 import com.example.dependencyinjectionapptest.example2.di.DaggerApplicationComponent
 import javax.inject.Inject
 
@@ -14,12 +14,14 @@ class MainActivity : AppCompatActivity() {
 
 	private val component by lazy {
 		DaggerApplicationComponent.builder()
-			.contextModule(ContextModule(application))
+			.context(application)
+			.currentTime(System.currentTimeMillis())
 			.build()
 
 	}
 
 	override fun onCreate(savedInstanceState: Bundle?) {
+		Log.d("EXAMPLE", "onCreate")
 		component.inject(this)
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
