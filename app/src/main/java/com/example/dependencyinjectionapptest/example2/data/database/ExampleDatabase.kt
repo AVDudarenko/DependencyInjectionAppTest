@@ -3,9 +3,7 @@ package com.example.dependencyinjectionapptest.example2.data.database
 import android.content.Context
 import android.util.Log
 import com.example.dependencyinjectionapptest.R
-import com.example.dependencyinjectionapptest.example2.di.ApplicationScope
 import javax.inject.Inject
-import javax.inject.Singleton
 
 class ExampleDatabase @Inject constructor(
     private val context: Context,
