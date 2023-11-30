@@ -4,7 +4,6 @@ import android.content.Context
 import com.example.dependencyinjectionapptest.example2.presentation.MainActivity
 import dagger.BindsInstance
 import dagger.Component
-import javax.inject.Singleton
 
 @ApplicationScope
 @Component(modules = [DataModule::class, DomainModule::class])
