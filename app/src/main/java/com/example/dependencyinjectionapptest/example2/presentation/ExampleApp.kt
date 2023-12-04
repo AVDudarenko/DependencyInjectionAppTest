@@ -1,4 +1,4 @@
-package com.example.dependencyinjectionapptest.example2
+package com.example.dependencyinjectionapptest.example2.presentation
 
 import android.app.Application
 import com.example.dependencyinjectionapptest.example2.di.DaggerApplicationComponent
