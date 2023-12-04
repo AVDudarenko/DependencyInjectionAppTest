@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.dependencyinjectionapptest.R
-import com.example.dependencyinjectionapptest.example2.ExampleApp
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
